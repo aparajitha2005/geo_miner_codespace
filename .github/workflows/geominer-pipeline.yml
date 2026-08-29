@@ -31,3 +31,12 @@ jobs:
     steps:
       - name: Run Geological Discovery Model
         run: echo "Running Geological Discovery Model..."
+
+  probability_output:
+    name: Probability Output
+    needs: geological_model
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Generate probability output
+        run: echo "Generating probability output..."
