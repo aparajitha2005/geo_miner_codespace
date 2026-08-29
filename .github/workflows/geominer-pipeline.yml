@@ -47,7 +47,7 @@ jobs:
 
     steps:
       - name: Prepare SERI input
-        run: echo "Preparing input for SERI model..."
+        run: echo "Preparing SERI input..."
 
   socioeconomic_model:
     name: Socio-Economic Model
@@ -65,4 +65,24 @@ jobs:
 
     steps:
       - name: Generate SERI output
-        run: echo "Generating SERI model output..."
+        run: echo "Generating SERI output..."
+
+  final_score:
+    name: Final Score
+    needs:
+      - probability_output
+      - seri_output
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Calculate final score
+        run: echo "Calculating final score..."
+
+  output:
+    name: Output
+    needs: final_score
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Generate final output
+        run: echo "Generating final output..."
