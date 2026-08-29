@@ -20,3 +20,14 @@ jobs:
     steps:
       - name: Imagery preprocessing
         run: echo "Preprocessing imagery data..."
+
+  geological_model:
+    name: Geological Discovery Model
+    needs:
+      - numeric_preprocessing
+      - imagery_preprocessing
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run Geological Discovery Model
+        run: echo "Running Geological Discovery Model..."
