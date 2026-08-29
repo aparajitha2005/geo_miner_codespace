@@ -1,0 +1,13 @@
+name: GeoMiner Pipeline
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Pipeline Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test
+        run: echo "GeoMiner pipeline is working!"
