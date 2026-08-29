@@ -4,10 +4,19 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
-    name: Pipeline Test
+
+  numeric_preprocessing:
+    name: Preprocess Numeric Data
     runs-on: ubuntu-latest
 
     steps:
-      - name: Test
-        run: echo "GeoMiner pipeline is working!"
+      - name: Numeric preprocessing
+        run: echo "Preprocessing numeric data..."
+
+  imagery_preprocessing:
+    name: Preprocess Imagery Data
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Imagery preprocessing
+        run: echo "Preprocessing imagery data..."
